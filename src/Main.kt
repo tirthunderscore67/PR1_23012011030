@@ -23,11 +23,24 @@
 
 //1.2Type Conversion: Perform type conversions such as Integer to Double, String to Integer, and String to Double.
 /*fun main() {
-           val a: String = "54"
-           val b = a.toDouble()
-        println("a=$a")
-    println("b=$b")
+    // String to Double
+    val a: String = "54"
+    val b = a.toDouble()
+    println("String a = $a")
+    println("Converted to Double b = $b")
 
+    // String to Integer
+    val c: String = "123"
+    val d = c.toInt()
+    println("String c = $c")
+    println("Converted to Int d = $d")
+
+    // Integer to Double
+    val e: Int = 75
+    val f = e.toDouble()
+    println("Int e = $e")
+    println("Converted to Double f = $f")
+}
 }*/
 
 
@@ -123,16 +136,45 @@
 
 //1.8.	Working with Arrays: Explore array operations such as Arrays.deepToString(), contentDeepToString(), IntArray.joinToString(), and use them to print arrays. Utilize various loop types like range, downTo, until, etc., to manipulate arrays. Sort an array of integers both without using built-in functions and with built-in functions.
 // Array Using arrayof()
-/*fun main() {
-//    val A = arrayOf(10,90,60,80,100)
-//    println(A.joinToString())
-    val b = Array(5){0}
-    println(b.joinToString(":"))
+fun main() {
+    // Basic arrays
+    val A = arrayOf(10, 90, 60, 80, 100)
+    println(A.joinToString())
+    val B = Array(5) { 0 }
+    println(B.joinToString(":"))
+
+    // Nested array operations
+    val nested = arrayOf(arrayOf(1, 2), arrayOf(3, 4))
+    println(Arrays.deepToString(nested))
+    println(nested.contentDeepToString())
+
+    // Loops
+    for (i in 0..A.lastIndex) print("${A[i]} ")
+    println()
+    for (i in A.lastIndex downTo 0) print("${A[i]} ")
+    println()
+    for (i in 0 until A.size) print("${A[i]} ")
+    println()
+    for (v in A) print("$v ")
+    println()
+
+    // Sorting without built-in function (bubble sort)
+    val unsorted = arrayOf(25, 10, 45, 20, 5)
+    for (i in 0 until unsorted.size - 1)
+        for (j in 0 until unsorted.size - i - 1)
+            if (unsorted[j] > unsorted[j + 1]) {
+                val temp = unsorted[j]; unsorted[j] = unsorted[j + 1]; unsorted[j + 1] = temp
+            }
+    println(unsorted.joinToString())
+
+    // Sorting with built-in function
+    val arr = arrayOf(33, 11, 55, 22, 44)
+    arr.sort()
+    println(arr.joinToString())
 }
 
 */
- */
-//9.Find Maximum Number from ArrayList: Write a program to find the maximum number from an ArrayList of integers.
+//1.9.Find Maximum Number from ArrayList: Write a program to find the maximum number from an ArrayList of integers.
 // fun main() {
 //    val numbers = arrayListOf(10, 45, 3, 76, 23, 89, 5)
 //
@@ -148,7 +190,7 @@
 //        println("The list is empty.")
 //    }
 //}
-//10.Class and Constructor Creation: Define different classes and constructors. Create a "Car" class with properties like type, model, price, owner, and miles driven. Implement functions to get car information, original car price, current car price, and display car information
+//1.10.Class and Constructor Creation: Define different classes and constructors. Create a "Car" class with properties like type, model, price, owner, and miles driven. Implement functions to get car information, original car price, current car price, and display car information
 // Car class with primary constructor
 //class Car(
 //    val type: String,
